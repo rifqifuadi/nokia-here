@@ -4,8 +4,10 @@ module Nokia
       class Isoline < Base
 
         def initialize
-          @method_name = 'calculateisoline'
           super()
+          @base_url    = 'http://isoline.route.api.here.com'
+          @test_url    = 'http://isoline.route.cit.api.here.com'
+          @method_name = 'calculateisoline'
         end
 
         def get(options={})

@@ -3,25 +3,24 @@ module Nokia
     module Resource
       class Base
 
-        # require all resources.
-        Dir["resource/*.rb"].each {|file| require file }
-
         BASE_URL = 'http://route.api.here.com'
         TEST_URL = 'http://route.cit.api.here.com'
         PATH     = '/routing/7.2/'
 
         attr_accessor :method_name, :base_url, :test_url, :path
 
+
         def initialize
-          @base_url = BASE_URL
-          @test_url = TEST_URL
-          @path     = PATH
-          raise "Austract Method."
+          @base_url    = BASE_URL
+          @test_url    = TEST_URL
+          @path        = PATH
+          @method_name = 'route'
         end
 
         def request_url(format: 'json')
           format ||= 'json'
-          url = Rails.env == 'production' ? self.base_url : self.test_url
+          url = Nokia::Here.env == 'test' ? self.test_url : self.base_url
+          puts url
           url = File.join(url, self.path , "#{self.method_name}.#{format}")
         end
 

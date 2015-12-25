@@ -4,8 +4,8 @@ module Nokia
       class LinkInfo < Base
 
         def initialize
-          @method_name = 'getlinkinfo'
           super()
+          @method_name = 'getlinkinfo'
         end
 
         def get(options={})

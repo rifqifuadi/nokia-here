@@ -4,8 +4,8 @@ module Nokia
       class Route < Base
 
         def initialize
-          @method_name = 'getroute'
           super()
+          @method_name = 'getroute'
         end
 
         def culculate_route(options={})
