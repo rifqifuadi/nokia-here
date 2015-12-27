@@ -40,7 +40,7 @@ Resourses and Methods:
       }
     res = Nokia::Here::Resource::Routing::Isoline.get options
     #res will be a hash of the calcualte resoure.
-    #for detaild parameters and options please refer to offical nokia here rest api documents
+  For detaild parameters and options please refer to offical nokia here rest api documents
 
 ## Contributing
 
