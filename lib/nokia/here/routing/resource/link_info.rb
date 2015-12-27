@@ -2,13 +2,11 @@ module Nokia
   module Here
     module Routing
       module Resource
-        class Isoline < Base
+        class LinkInfo < Base
 
           def initialize
             super()
-            @base_url    = 'http://isoline.route.api.here.com'
-            @test_url    = 'http://isoline.route.cit.api.here.com'
-            @method_name = 'calculateisoline'
+            @method_name = 'getlinkinfo'
           end
 
           def get(options={})
@@ -17,6 +15,8 @@ module Nokia
             raise "One of destination or start must be supplied" unless destination or start
             super(options)
           end
+
+
 
         end
       end

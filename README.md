@@ -1,6 +1,6 @@
 # Nokia::Here
 
-TODO: Write a gem description
+This is a ruby gem for Nokia here map rest api. It is still on a early developing stage. Only Routing APIs are implemented.
 
 ## Installation
 
@@ -17,14 +17,17 @@ Or install it yourself as:
     $ gem install nokia-here
 
 ## Usage
-
-TODO: Write usage instructions here
-
 Configuration:
 
     Nokia::Here.app_id = 'YOUR_APP_ID'
     Nokia::Here.app_code = 'YOUR_APP_CODE'
 
+Resourse:
+
+    Nokia::Here::Resource::Isoline
+    Nokia::Here::Resource::LinkInfo
+    Nokia::Here::Resource::Matrix
+    Nokia::Here::Resource::Route
 
 ## Contributing
 

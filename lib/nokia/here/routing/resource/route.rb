@@ -24,7 +24,7 @@ module Nokia
           end
 
         end
-      end
+      end  
     end
   end
 end

@@ -19,19 +19,5 @@ RSpec.describe Nokia::Here::Routing::Resource::Isoline do
 
       expect(res.code).to eq(200)
     end
-
-    it "Should ask for at least a start or a destination" do
-      options = {
-        mode: 'fastest;car;traffic:enabled',
-        rangetype: 'time',
-        # start: 'geo!-37.8089497,144.9731852',
-        range: 600,
-        departure: Time.now.xmlschema
-      }
-
-      expect{Nokia::Here::Routing::Resource::Isoline.get options}.to raise_error(RuntimeError)
-
-
-    end
   end
 end
