@@ -15,9 +15,7 @@ module Nokia
             raise "One of destination or start must be supplied" unless destination or start
             super(options)
           end
-
-
-
+          
         end
       end
     end
