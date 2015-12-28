@@ -24,12 +24,16 @@ Configuration:
 
 Resourses and Methods:
 
+    #Routing API, not fully tested.
     Nokia::Here::Resource::Routing::Isoline.get options
     Nokia::Here::Resource::Routing::LinkInfo.get options
     Nokia::Here::Resource::Routing::Matrix.get options
     Nokia::Here::Resource::Routing::Route.calculate_route options
     Nokia::Here::Resource::Routing::Route.get_route options
-    
+
+    #Transit API, not tested
+    Nokia::Here::Resource::Transit::Isochrone.search options
+
     #Example:
     options = {
         mode: 'fastest;car;traffic:enabled',
@@ -41,12 +45,14 @@ Resourses and Methods:
     res = Nokia::Here::Resource::Routing::Isoline.get options
     #res will be a hash of the calcualte resoure.
   For detailed parameters and options please refer to offical nokia here rest api documents
-  
+
 
 ## TODO
 More tests and API to be added.
 
 ## Contributing
+
+Welcome to add testing or to implement other resources API.
 
 1. Fork it ( https://github.com/[my-github-username]/nokia-here/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
