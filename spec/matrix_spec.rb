@@ -1,5 +1,5 @@
 require './lib/nokia/here'
-RSpec.describe Nokia::Here::Routing::Resource::Isoline do
+RSpec.describe Nokia::Here::Resource::Routing::Isoline do
 
   Nokia::Here.app_id   = 'O4A0cqvdvijQCj0Bkpv4'
   Nokia::Here.app_code = 'djVlsYVe-PClHnBpb9CZ1w'
@@ -15,7 +15,7 @@ RSpec.describe Nokia::Here::Routing::Resource::Isoline do
         departure: Time.now.xmlschema
       }
 
-      res = Nokia::Here::Routing::Resource::Isoline.get options
+      res = Nokia::Here::Resource::Routing::Isoline.get options
 
       expect(res.code).to eq(200)
     end

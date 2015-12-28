@@ -2,7 +2,7 @@ module Nokia
   module Here
     module Routing
       module Resource
-        class Route < Base
+        class Route < Nokia::Here::Resource::Base
 
           def initialize
             super()
@@ -24,7 +24,7 @@ module Nokia
           end
 
         end
-      end  
+      end
     end
   end
 end

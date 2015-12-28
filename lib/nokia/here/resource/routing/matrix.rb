@@ -1,7 +1,7 @@
 module Nokia
   module Here
-    module Routing
-      module Resource
+    module Resource
+      module Routing
         class Matrix < Base
 
           def initialize
