@@ -14,6 +14,7 @@ module Nokia
           def get(options={})
             destination = options[:destination]
             start       = options[:start]
+            raise ":range, :rangetype, :mode are required." unless options[:range] and options[:rangetype] and options[:mode]
             raise "One of destination or start must be supplied" unless destination or start
             super(options)
           end

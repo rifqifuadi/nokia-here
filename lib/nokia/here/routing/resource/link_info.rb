@@ -10,12 +10,11 @@ module Nokia
           end
 
           def get(options={})
-            destination = options[:destination]
-            start       = options[:start]
-            raise "One of destination or start must be supplied" unless destination or start
+            raise ":linkids is required" unless options[:linkids]
+            raise "One of :quadKey or :tmcCodes is required" unless options[:quadKey] or options[:tmcCodes]
             super(options)
           end
-          
+
         end
       end
     end
