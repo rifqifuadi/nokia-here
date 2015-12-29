@@ -16,6 +16,10 @@ Or install it yourself as:
 
     $ gem install nokia-here
 
+And then require it manually:
+
+    require 'nokia/here'
+
 ## Usage
 Configuration:
 ```ruby
