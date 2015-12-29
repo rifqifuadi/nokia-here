@@ -18,32 +18,32 @@ Or install it yourself as:
 
 ## Usage
 Configuration:
-
-    Nokia::Here.app_id = 'YOUR_APP_ID'
-    Nokia::Here.app_code = 'YOUR_APP_CODE'
-
+```ruby
+Nokia::Here.app_id = 'YOUR_APP_ID'
+Nokia::Here.app_code = 'YOUR_APP_CODE'
+```
 Resourses and Methods:
 
-    #Routing API, not fully tested.
-    Nokia::Here::Resource::Routing::Isoline.get options
-    Nokia::Here::Resource::Routing::LinkInfo.get options
-    Nokia::Here::Resource::Routing::Matrix.get options
-    Nokia::Here::Resource::Routing::Route.calculate_route options
-    Nokia::Here::Resource::Routing::Route.get_route options
+#Routing API, not fully tested.
+Nokia::Here::Resource::Routing::Isoline.get options
+Nokia::Here::Resource::Routing::LinkInfo.get options
+Nokia::Here::Resource::Routing::Matrix.get options
+Nokia::Here::Resource::Routing::Route.calculate_route options
+Nokia::Here::Resource::Routing::Route.get_route options
 
-    #Transit API, not tested
-    Nokia::Here::Resource::Transit::Isochrone.search options
+#Transit API, not tested
+Nokia::Here::Resource::Transit::Isochrone.search options
 
-    #Example:
-    options = {
-        mode: 'fastest;car;traffic:enabled',
-        rangetype: 'time',
-        start: 'geo!-37.8089497,144.9731852',
-        range: 600,
-        departure: Time.now.xmlschema
-      }
-    res = Nokia::Here::Resource::Routing::Isoline.get options
-    #res will be a hash of the calcualte resoure.
+#Example:
+options = {
+    mode: 'fastest;car;traffic:enabled',
+    rangetype: 'time',
+    start: 'geo!-37.8089497,144.9731852',
+    range: 600,
+    departure: Time.now.xmlschema
+  }
+res = Nokia::Here::Resource::Routing::Isoline.get options
+#res will be a hash of the calcualte resoure.
   For detailed parameters and options please refer to offical nokia here rest api documents
 
 
