@@ -44,7 +44,8 @@ options = {
     departure: Time.now.xmlschema
   }
 res = Nokia::Here::Resource::Routing::Isoline.get options
-#res will be a hash of the calcualte resoure.
+# => returns JSON formatted string. You might wanna
+response_hash = JSON.parse(res)
 ```
 
 For detailed parameters and options please refer to offical nokia here rest api documents
