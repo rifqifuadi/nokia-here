@@ -40,7 +40,7 @@ module Nokia
         # direct call to instance methods as class methods.
         def self.method_missing(method_sym, *arg, &block)
           if self.instance_methods.include?(method_sym)
-            self.new.send(method_sym)
+            self.new.send(method_sym, *arg, &block)
           else
             super
           end
