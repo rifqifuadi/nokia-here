@@ -39,6 +39,11 @@ Nokia::Here::Resource::Routing::Route.get_route options
 #Transit API, not tested
 Nokia::Here::Resource::Transit::Isochrone.search options
 
+#Geocoding API
+Nokia::Here::Resource::Geocoder.geocde
+Nokia::Here::Resource::Geocoder.reverse_geocde
+Nokia::Here::Resource::Geocoder.multi_reverse_geocode
+
 # Example:
 options = {
     mode: 'fastest;car;traffic:enabled',

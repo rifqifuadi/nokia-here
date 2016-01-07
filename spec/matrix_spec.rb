@@ -1,9 +1,6 @@
 require './lib/nokia/here'
+require './spec/app_setup'
 RSpec.describe Nokia::Here::Resource::Routing::Isoline do
-
-  Nokia::Here.app_id   = 'O4A0cqvdvijQCj0Bkpv4'
-  Nokia::Here.app_code = 'djVlsYVe-PClHnBpb9CZ1w'
-  Nokia::Here.env      = 'test'
 
   describe "get isoline" do
     it "Should get a vaild isoline json" do
