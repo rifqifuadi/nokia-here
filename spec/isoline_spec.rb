@@ -27,7 +27,20 @@ RSpec.describe Nokia::Here::Resource::Routing::Isoline do
       }
 
       expect{Nokia::Here::Resource::Routing::Isoline.get options}.to raise_error(RuntimeError)
+    end
 
+    it "Should return a JSON" do
+      options = {
+        mode: 'fastest;car;traffic:enabled',
+        rangetype: 'time',
+        start: 'geo!-37.8089497,144.9731852',
+        range: 600,
+        departure: Time.now.xmlschema
+      }
+
+      res = Nokia::Here::Resource::Routing::Isoline.get options
+
+      expect(res.class).to eq(String)
 
     end
   end

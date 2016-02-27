@@ -21,7 +21,6 @@ module Nokia
           format ||= 'json'
           url = Nokia::Here.env == 'test' ? self.test_url : self.base_url
           url = File.join(url, self.path , "#{self.method_name}.#{format}")
-          puts url
           url
         end
 
